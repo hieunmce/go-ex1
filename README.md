@@ -11,7 +11,7 @@ Time spent: **{{time_spent}}** hours spent in total
 ### Required:
 
 #### Stage 1:
-* [x] API must be able to CRUD category of books:
+* [ ] API must be able to CRUD category of books:
   * [ ] Each category should have the following fields:
     * name (string)
     * tags (string)
@@ -28,10 +28,11 @@ Time spent: **{{time_spent}}** hours spent in total
 
 * [ ] API must be able to CRUD books:
   * [ ] Each book should have the following fields:
-    * name
+    * name (string)
     * category_id
-    * author
-    * description
+    * author (string)
+    * description (string)
+    * tags (string)
   * [ ] API must be able to get detail of a book.
   * [ ] API must be able to get list of books.
   * [ ] API must be able to create a book.
@@ -39,13 +40,14 @@ Time spent: **{{time_spent}}** hours spent in total
   * [ ] API must be able to delete a book.
   
 * [ ] Validate books is correct before (Create/Update):
+  * [ ] validate category of a book is exist, if not reject it with error message
   * [ ] validate name of a book is not empty and length > 5 characters. if not reject it with error message
   * [ ] validate description of a book is not empty and length > 5 characters. if not reject it with error message
   
 * [ ] API must be able to CRUD users:
   * [ ] Each user should have the following fields:
-    * name
-    * emails
+    * name (string)
+    * emails (string)
   * [ ] API must be able to get list of users
   * [ ] API must be able to create a user
   * [ ] API must be able to update a user
@@ -56,8 +58,8 @@ Time spent: **{{time_spent}}** hours spent in total
   * [ ] API should have the following fields:
     * book_id
     * user_id
-    * from
-    * to
+    * from (datetime)
+    * to (datetime)
   * [ ] validate books is available to lend, if not available reject with error message
   * [ ] validate 1 user only can lend 3 books, if lend more reject with error message
   
@@ -67,7 +69,7 @@ Time spent: **{{time_spent}}** hours spent in total
   * [ ] API should have the following fields:
     * book_id
     * user_id
-    * return_date
+    * return_date (datetime)
   * [ ] validate books is available to return(user_id is current who lending that book), if not available reject with error message.
   
 * [ ] API must be able to gets list of books and it status (virtual base by lending status)
@@ -76,10 +78,11 @@ Time spent: **{{time_spent}}** hours spent in total
 
 ### Optional:
 
+*  [ ] List books and filter by names, availables
 *  [ ] batch create books (create multiple book with 1 API)
 *  [ ] batch lending books (user can lending multiple books with 1 api)
 *  [ ] batch return books (user can return multiple books with 1 api)
-*  [ ] List books and filter by names, availables
+*  [ ] implement feature add a tags to books can search book by tag name
 
 
 The following **additional** features are implemented:
@@ -101,7 +104,7 @@ Notes about current git.
 
 ## License
 
-    Copyright [2016] [HieuNM6]
+    Copyright [2016] [{{github_user_name}}]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
