@@ -14,7 +14,6 @@ Time spent: **{{time_spent}}** hours spent in total
 * [ ] API must be able to CRUD category of books:
   * [ ] Each category should have the following fields:
     * name (string)
-    * tags (string)
   * [ ] API must be able to get detail of a category.
   * [ ] API must be able to get list of categories.
   * [ ] API must be able to create a category.
